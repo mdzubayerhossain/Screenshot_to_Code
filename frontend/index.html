@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image to Code Converter</title>
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Image to Code Converter</h1>
+            <p>Upload an image of code and convert it to actual code!</p>
+        </div>
+        <div class="results">
+            <div class="result-box">
+                <h3>Extracted Text</h3>
+                <pre id="extracted-text" class="code-output">Loading...</pre>
+            </div>
+            <div class="result-box">
+                <h3>Generated Code</h3>
+                <pre id="generated-code" class="code-output">Loading...</pre>
+            </div>
+        </div>
+        <div class="converter-section">
+            <form id="convert-form">
+                <div class="input-group">
+                    <label for="image-input">Select Image</label>
+                    <input type="file" id="image-input" accept="image/*" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="framework-select">Framework</label>
+                    <select id="framework-select">
+                        <option value="react">React</option>
+                        <option value="vue">Vue</option>
+                        <option value="angular">Angular</option>
+                        <option value="html">HTML</option>
+                    </select>
+                </div>
+
+                <button type="submit">Convert to Code</button>
+            </form>
+
+            <div class="results">
+                <div class="result-box">
+                    <h3>Extracted Text</h3>
+                    <pre id="extracted-text">Your extracted text will appear here...</pre>
+                </div>
+                <div class="result-box">
+                    <h3>Generated Code</h3>
+                    <pre id="generated-code">Your generated code will appear here...</pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="/scripts/main.js"></script>
+</body>
+</html>
